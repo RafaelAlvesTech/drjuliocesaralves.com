@@ -19,7 +19,7 @@ module.exports = {
                 'subscribe': "url('assets/images/bg/bg2.jpg')",
                 'money-calculator-form': "url('assets/images/bg/bg1.jpg')",
                 'faq': "url('assets/images/bg/bg3.jpg')",
-                'login': "url('assets/images/login.jpg')",
+                'login': "url('assets/images/marinha.png')",
                 'register': "url('assets/images/register.jpg')",
             },
             boxShadow: {
