@@ -36,7 +36,7 @@ const routes: Routes = [
     {path: 'cash-back', component: CashBackPageComponent},
     {path: 'pricing', component: PricingPageComponent},
     {path: 'help', component: HelpPageComponent},
-    {path: 'login', component: LoginPageComponent},
+    {path: 'login', component: LoginPageComponent, title:'Dr. Júlio César Alves | Login'},
     {path: 'register', component: RegisterPageComponent},
     {path: 'privacy-policy', component: PrivacyPolicyPageComponent},
     {path: 'terms-conditions', component: TermsConditionsPageComponent},
