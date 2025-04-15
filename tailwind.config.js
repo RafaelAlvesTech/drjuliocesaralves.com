@@ -5,8 +5,8 @@ module.exports = {
     ],
     theme: {
         fontFamily: {
-            'serif': ['Archivo Black', 'sans-serif'],
-            'sans': ['Plus Jakarta Sans', 'sans-serif'],
+            'serif': ['Poppins', 'sans-serif'],
+            'sans': ['Relaway', 'sans-serif'],
         },
         extend: {
             zIndex: {
@@ -49,12 +49,12 @@ module.exports = {
             '5': '5px',
         },
         colors: {
-            'gray': '#edefeb',
+            'gray': '#FFF1E2',
             'white': '#ffffff',
             'black': '#0e0f0c',
-            'primary': '#01354a',
+            'primary': '#030A33',
             'secondary': '#454745',
-            'warning': '#ffd15c',
+            'warning': '#28AAE4',
             'success': '#008000',
             'danger': '#c22e2e',
             'transparent': 'transparent',
