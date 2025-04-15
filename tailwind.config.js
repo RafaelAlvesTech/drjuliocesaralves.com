@@ -14,14 +14,6 @@ module.exports = {
                 '-1': '-1',
                 '2': '2',
             },
-            backgroundImage: {
-                'banner': "url('assets/images/banners/banner-bg.jpg')",
-                'subscribe': "url('assets/images/bg/bg2.jpg')",
-                'money-calculator-form': "url('assets/images/bg/bg1.jpg')",
-                'faq': "url('assets/images/bg/bg3.jpg')",
-                'login': "url('assets/images/marinha.png')",
-                'register': "url('assets/images/register.jpg')",
-            },
             boxShadow: {
                 'one': '0 0 40px rgba(69, 71, 69, .2)',
                 'dropdown': '0px 0px 15px 0px rgba(0, 0, 0, .10)',

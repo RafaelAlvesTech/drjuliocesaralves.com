@@ -1,43 +1,30 @@
+import { NgClass, ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router, NavigationCancel, NavigationEnd } from '@angular/router';
-import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
-import { filter } from 'rxjs/operators';
-declare let $: any;
+import { NavigationEnd, Router, RouterOutlet, Event } from '@angular/router';
+import { NavbarComponent } from './common/navbar/navbar.component';
+import { FooterComponent } from './common/footer/footer.component';
+import { BackToTopComponent } from './common/back-to-top/back-to-top.component';
 
 @Component({
     selector: 'app-root',
+    imports: [RouterOutlet, NavbarComponent, FooterComponent, NgClass, BackToTopComponent],
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss'],
-    providers: [
-        Location, {
-            provide: LocationStrategy,
-            useClass: PathLocationStrategy
-        }
-    ]
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
-    
-    location: any;
-    routerSubscription: any;
+
+    title = 'Arad - Angular 19 Banking & Money Transfer Template';
 
     constructor(
-        public router: Router
-    ) {}
-
-    ngOnInit(){
-        this.recallJsFuntions();
-    }
-
-    recallJsFuntions() {
-        this.routerSubscription = this.router.events
-        .pipe(filter(event => event instanceof NavigationEnd || event instanceof NavigationCancel))
-        .subscribe(event => {
-            this.location = this.router.url;
-            if (!(event instanceof NavigationEnd)) {
-                return;
+        public router: Router,
+        private viewportScroller: ViewportScroller
+    ) {
+        this.router.events.subscribe((event: Event) => {
+            if (event instanceof NavigationEnd) {
+                // Scroll to the top after each navigation end
+                this.viewportScroller.scrollToPosition([0, 0]);
             }
-            window.scrollTo(0, 0);
         });
     }
-
+    
 }
